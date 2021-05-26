@@ -106,3 +106,20 @@ fun MovieEntity.toMovie(): Movie = Movie(
     this.movie_type
 )
 
+fun Movie.toMovieEntity(movie_type: String): MovieEntity = MovieEntity(
+    this.id,
+    this.adult,
+    this.backdrop_path,
+    this.original_title,
+    this.original_language,
+    this.popularity,
+    this.poster_path,
+    this.overview,
+    this.release_date,
+    this.title,
+    this.video,
+    this.vote_count,
+    this.vote_average,
+    movie_type = movie_type
+)
+

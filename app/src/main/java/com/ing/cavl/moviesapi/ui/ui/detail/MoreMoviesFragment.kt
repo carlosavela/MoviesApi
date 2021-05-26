@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ing.cavl.moviesapi.R
 import com.ing.cavl.moviesapi.databinding.FragmentMoreMoviesBinding
 import com.ing.cavl.moviesapi.ui.core.Resource
+import com.ing.cavl.moviesapi.ui.data.local.AppDataBase
+import com.ing.cavl.moviesapi.ui.data.local.LocalMovieDataSource
 import com.ing.cavl.moviesapi.ui.data.model.Movie
 import com.ing.cavl.moviesapi.ui.data.remote.RemoteMovieDataSource
 import com.ing.cavl.moviesapi.ui.presentation.MovieViewModel
@@ -36,7 +38,8 @@ class MoreMoviesFragment : Fragment(R.layout.fragment_more_movies),
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
-                RemoteMovieDataSource(RetrofitClient.webservice)
+                RemoteMovieDataSource(RetrofitClient.webservice),
+                LocalMovieDataSource(AppDataBase.getDataBase(requireContext()).movieDao())
             )
         )
     }
@@ -189,7 +192,7 @@ class MoreMoviesFragment : Fragment(R.layout.fragment_more_movies),
     }
 
     override fun onTitleClick(movie: Movie) {
-        Toast.makeText(requireContext(), "${movie.title} , ${movie.genre_ids}", Toast.LENGTH_SHORT)
-            .show()
+//        Toast.makeText(requireContext(), "${movie.title} , ${movie.genre_ids}", Toast.LENGTH_SHORT)
+//            .show()
     }
 }
