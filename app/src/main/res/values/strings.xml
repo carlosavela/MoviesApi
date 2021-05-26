@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MoviesApi</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titulo">Titulo</string>
+    <string name="todo">TODO</string>
+    <string name="d">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ipsum augue, viverra sed dui vel, tincidunt volutpat orci. Nunc blandit faucibus faucibus. Phasellus mollis condimentum magna, dictum placerat elit tempor quis. Etiam faucibus, ex sed eleifend aliquet, tortor nibh dapibus ante, eget congue tellus ante semper nibh. Donec semper magna sed scelerisque facilisis. Cras vel semper enim, ac posuere lorem. In tempus sapien ac tempus ultricies. Donec tortor libero, lobortis at velit quis, vulputate pellentesque neque. Vestibulum eget pharetra elit. Fusce sagittis risus non sem maximus molestie. Etiam mattis augue vel libero placerat lobortis. Ut pellentesque velit sit amet lobortis congue. Vestibulum maximus porttitor turpis sit amet lacinia. Praesent et sapien bibendum, pretium purus at, sagittis odio. Quisque sit amet auctor ante, in lacinia tellus.
+
+Vivamus vehicula velit gravida dui fermentum tempus. Morbi fringilla lorem et ultricies fermentum. Phasellus maximus accumsan sapien, sed facilisis odio semper ut. Mauris molestie, elit ac vestibulum commodo, ante dolor sodales ex, nec finibus est ligula eu nisl. In cursus, velit cursus venenatis aliquet, nisl massa consequat nunc, sed tincidunt tellus metus sodales libero. Integer dictum diam dolor, viverra tempor magna convallis in. Sed egestas vel quam at euismod. Nullam consectetur nulla vitae erat pulvinar dapibus. Fusce imperdiet viverra augue, vel consectetur metus condimentum a.
+
+Aenean tempus tortor nunc, quis malesuada sem eleifend at. Aenean justo leo, tristique sed velit at, vehicula consequat nibh. Cras id euismod sem. Maecenas metus nunc, commodo a odio vel, molestie aliquet magna. Quisque quis facilisis sapien, non suscipit mauris. Nulla facilisi. Suspendisse et lobortis lectus. Donec et libero ut purus congue commodo. Donec imperdiet auctor risus, eget pharetra eros sollicitudin eu. Cras semper magna eget ligula bibendum, non luctus libero imperdiet.
+
+Morbi elit dolor, congue a venenatis ac, dignissim vitae augue. Duis venenatis maximus consectetur. Etiam at ligula porta, ultrices arcu eu, pulvinar tellus. Aliquam mollis ultrices pulvinar. Integer nulla lorem, aliquam ac erat eu, auctor finibus nulla. Suspendisse placerat urna ac neque faucibus, eget venenatis metus tincidunt. Quisque mattis ante quis tellus sodales vestibulum et quis magna. Fusce nec mi id urna tincidunt consequat id sit amet urna. Curabitur ligula odio, malesuada sit amet pharetra at, mattis non turpis. Donec ac mi et massa dignissim lacinia sit amet vel mauris. Aenean sit amet interdum augue. Nunc leo dolor, pharetra at sagittis at, pharetra in nulla. Sed eros orci, suscipit a odio blandit, condimentum luctus purus. Mauris lobortis lorem eu dui maximus fermentum. Proin maximus tempor laoreet. Integer id dolor vel felis tincidunt pellentesque.
+
+Proin scelerisque blandit facilisis. Praesent ut suscipit nibh, ut interdum sem. In iaculis elit sed bibendum pulvinar. Nunc pulvinar id odio rutrum aliquam. Praesent viverra posuere tellus a imperdiet. Aenean blandit, enim in semper tempor, purus nulla euismod lorem, vitae efficitur enim lacus quis quam. Aliquam erat volutpat. Phasellus odio nunc, vehicula et lectus consequat, faucibus sagittis libero. Curabitur pulvinar tristique purus, non tincidunt leo porttitor auctor. Ut rutrum, massa non suscipit rhoncus, dolor quam fringilla turpis, non pretium tortor nibh quis ante. Quisque nisi dui, rhoncus nec tincidunt ac, aliquet sagittis odio. Sed tempor pellentesque mattis. Proin ultricies sit amet nisl id varius.</string>
+    <string name="upcoming_movies">Upcoming Movies</string>
+    <string name="top_rated">Top Rated Movies</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="overview">Overview</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="now_playing">Now Playing</string>
+</resources>
