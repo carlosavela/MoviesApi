@@ -7,7 +7,7 @@ import com.ing.cavl.moviesapi.ui.data.model.MovieList
 import com.ing.cavl.moviesapi.ui.repository.WebService
 import com.ing.cavl.moviesapi.ui.ui.detail.MovieDetailFragmentArgs
 
-class MovieDataSource(private val webService: WebService) {
+class RemoteMovieDataSource(private val webService: WebService) {
 
 
     // se crea la consulta para traer la informacion

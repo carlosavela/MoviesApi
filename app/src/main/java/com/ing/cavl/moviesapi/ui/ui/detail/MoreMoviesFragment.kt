@@ -13,7 +13,7 @@ import com.ing.cavl.moviesapi.R
 import com.ing.cavl.moviesapi.databinding.FragmentMoreMoviesBinding
 import com.ing.cavl.moviesapi.ui.core.Resource
 import com.ing.cavl.moviesapi.ui.data.model.Movie
-import com.ing.cavl.moviesapi.ui.data.remote.MovieDataSource
+import com.ing.cavl.moviesapi.ui.data.remote.RemoteMovieDataSource
 import com.ing.cavl.moviesapi.ui.presentation.MovieViewModel
 import com.ing.cavl.moviesapi.ui.presentation.MovieViewModelFactory
 import com.ing.cavl.moviesapi.ui.repository.MovieRepositoryImpl
@@ -36,7 +36,7 @@ class MoreMoviesFragment : Fragment(R.layout.fragment_more_movies),
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
-                MovieDataSource(RetrofitClient.webservice)
+                RemoteMovieDataSource(RetrofitClient.webservice)
             )
         )
     }

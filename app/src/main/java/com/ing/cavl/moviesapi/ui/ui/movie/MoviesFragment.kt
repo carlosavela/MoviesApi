@@ -4,22 +4,18 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import com.ing.cavl.moviesapi.R
 import com.ing.cavl.moviesapi.databinding.FragmentMoviesBinding
 import com.ing.cavl.moviesapi.ui.core.Resource
 import com.ing.cavl.moviesapi.ui.data.model.Movie
-import com.ing.cavl.moviesapi.ui.data.remote.MovieDataSource
+import com.ing.cavl.moviesapi.ui.data.remote.RemoteMovieDataSource
 import com.ing.cavl.moviesapi.ui.presentation.MovieViewModel
 import com.ing.cavl.moviesapi.ui.presentation.MovieViewModelFactory
 import com.ing.cavl.moviesapi.ui.repository.MovieRepositoryImpl
 import com.ing.cavl.moviesapi.ui.repository.RetrofitClient
-import com.ing.cavl.moviesapi.ui.repository.WebService
 import com.ing.cavl.moviesapi.ui.ui.movie.adapters.concat.*
 
 class MoviesFragment : Fragment(R.layout.fragment_movies), MovieAdapter.onMovieClickListener, UpcomingConcatAdapter.onSeeMoreMovies {
@@ -32,7 +28,7 @@ class MoviesFragment : Fragment(R.layout.fragment_movies), MovieAdapter.onMovieC
     private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(
             MovieRepositoryImpl(
-                MovieDataSource(RetrofitClient.webservice)
+                RemoteMovieDataSource(RetrofitClient.webservice)
             )
         )
     }
