@@ -1,5 +1,6 @@
 package com.ing.cavl.moviesapi.ui.repository
 
+import com.ing.cavl.moviesapi.ui.core.InternetCheck
 import com.ing.cavl.moviesapi.ui.data.local.LocalMovieDataSource
 import com.ing.cavl.moviesapi.ui.data.model.MovieDetail
 import com.ing.cavl.moviesapi.ui.data.model.MovieList
@@ -18,31 +19,48 @@ class MovieRepositoryImpl(
         dataSourceRemote.getUpcomingMoreMovies(page)
 
     override suspend fun getUpcomingMovies(): MovieList {
-        dataSourceRemote.getUpcomingMovies().results.forEach {
-            dataSourceLocal.saveMovie(it.toMovieEntity("upcoming"))
+        return if (InternetCheck.isNetworkAvailable()) {
+            dataSourceRemote.getUpcomingMovies().results.forEach {
+                dataSourceLocal.saveMovie(it.toMovieEntity("upcoming"))
+            }
+            dataSourceLocal.getUpcomingMovies()
+        } else {
+            dataSourceLocal.getUpcomingMovies()
         }
-        return dataSourceLocal.getUpcomingMovies()
+
     }
 
     override suspend fun getTopRatedMovies(): MovieList {
-        dataSourceRemote.getTopRaterMovies().results.forEach {
-            dataSourceLocal.saveMovie(it.toMovieEntity("toprater"))
+        return if (InternetCheck.isNetworkAvailable()) {
+            dataSourceRemote.getTopRaterMovies().results.forEach {
+                dataSourceLocal.saveMovie(it.toMovieEntity("toprater"))
+            }
+            dataSourceLocal.getTopRaterMovies()
+        } else {
+            dataSourceLocal.getTopRaterMovies()
         }
-        return dataSourceLocal.getTopRaterMovies()
     }
 
     override suspend fun getPopularMovies(): MovieList {
-        dataSourceRemote.getPopularMovies().results.forEach {
-            dataSourceLocal.saveMovie(it.toMovieEntity("popular"))
+        return if (InternetCheck.isNetworkAvailable()) {
+            dataSourceRemote.getPopularMovies().results.forEach {
+                dataSourceLocal.saveMovie(it.toMovieEntity("popular"))
+            }
+            dataSourceLocal.getPopularMovies()
+        } else {
+            dataSourceLocal.getPopularMovies()
         }
-        return dataSourceLocal.getPopularMovies()
     }
 
     override suspend fun getNowPlayingMovies(): MovieList {
-        dataSourceRemote.getNowPlayingMovies().results.forEach {
-            dataSourceLocal.saveMovie(it.toMovieEntity("nowplaying"))
+        return if (InternetCheck.isNetworkAvailable()) {
+            dataSourceRemote.getNowPlayingMovies().results.forEach {
+                dataSourceLocal.saveMovie(it.toMovieEntity("nowplaying"))
+            }
+            dataSourceLocal.getNowPlayingMovies()
+        } else {
+            dataSourceLocal.getNowPlayingMovies()
         }
-        return dataSourceLocal.getNowPlayingMovies()
     }
 }
 
