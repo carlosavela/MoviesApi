@@ -30,4 +30,5 @@ Proin scelerisque blandit facilisis. Praesent ut suscipit nibh, ut interdum sem.
     <string name="favorite">Favorite</string>
     <string name="share">Share</string>
     <string name="now_playing">Now Playing</string>
+    <string name="ver_mas">Ver Mas</string>
 </resources>
